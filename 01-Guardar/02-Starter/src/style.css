@@ -1,12 +1,10 @@
-/* Estilos base neutros: la dirección de arte es tuya.
-   Cambia el fondo, los colores y la tipografía. */
 :root {
-  --fondo-1: #2a2a2a;
-  --fondo-2: #111111;
-  --texto: #f2f2f2;
-  --acento: #bdbdbd;
+  --fondo-1: #2e1a14;
+  --fondo-2: #06080d;
+  --texto: #f4efe6;
+  --acento: #ff6a3d;
 
-  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 }
 
@@ -36,6 +34,7 @@ body {
   top: 10vh;          /* arriba: el centro es del objeto 3D */
   max-width: 30ch;
   pointer-events: none;
+  z-index: 1;
 }
 
 .kicker {
@@ -61,57 +60,38 @@ body {
   opacity: .75;
 }
 
-/* Barra de progreso ------------------------------------------------------ */
-#barra {
-  position: fixed;
-  left: 7vw;
-  right: 7vw;
-  bottom: 64px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  pointer-events: none;
 
-  b {
-    min-width: 4ch;
-    text-align: right;
-    font: 500 14px/1 var(--mono);
-    font-variant-numeric: tabular-nums;
-  }
-}
-
-#barra-pista {
-  flex: 1;
-  height: 4px;
-  border-radius: 2px;
-  background: rgb(255 255 255 / .12);
-  overflow: hidden;
-}
-
-#barra-relleno {
+/* Data containers en HTML ---------------------------------------------------------- */
+#data-extracts {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
   height: 100%;
-  background: var(--acento);
-  transform-origin: left;     /* que crezca desde la izquierda */
-  transform: scaleX(0);
-}
-
-/* Lectura de datos ------------------------------------------------------ */
-#hud {
-  position: fixed;
-  left: 7vw;
-  bottom: 28px;
+  padding-left: 33%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font: 400 12px/1 var(--mono);
-  letter-spacing: .06em;
-  opacity: .55;
-  font-variant-numeric: tabular-nums;
-  pointer-events: none;
-
-  b { font-weight: 500; color: var(--texto); }
 }
 
-@media (max-width: 800px) {
-  #barra { bottom: 84px; }
+.wheel-values {
+  width: 100%;
+  padding-top: 60px;
+  border-left: 1px solid white;
+}
+
+.wheel-values ul li {
+  position: relative;
+  margin-bottom: 54px;
+}
+
+.wheel-values .label {
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.wheel-values .data {
+  font-size: 40px;
+  font-weight: 400;
+  margin: 0;
 }
