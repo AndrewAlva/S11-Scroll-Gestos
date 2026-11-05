@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-demo. (Scroll-Sin-Pagina)</title>
+  </head>
+  <body>
+    <!-- La escena 3D va fija detrás, con fondo transparente.
+         Aquí NADA desborda: no hay página que se mueva. Solo contamos el gesto. -->
+    <!-- <canvas id="lienzo"></canvas> -->
+
+    <header id="copy">
+      <p class="kicker">Ejercicio 01 · S11</p>
+      <h1 class="titulo">Wheel event.</h1>
+      <p class="bajada">Escuchar al "scroll" sin contenedores o barras.</p>
+    </header>
+
+    <main id="data-extracts">
+      <section class="wheel-values" id="read">
+        <ul>
+          <li>
+            <h6 class="label">Delta mode:</h6>
+            <p class="data" id="wheel-deltaMode">?</p>
+          </li>
+          
+          <li>
+            <h6 class="label">Delta Y:</h6>
+            <p class="data" id="wheel-deltaY">?</p>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="wheel-values" id="calculated">
+        <ul>
+          <li>
+            <h6 class="label">Delta acumulado:</h6>
+            <p class="data" id="wheel-deltaTotal">?</p>
+          </li>
+          
+          <li>
+            <h6 class="label">Dirección:</h6>
+            <p class="data" id="wheel-direction">?</p>
+          </li>
+          
+          <li>
+            <h6 class="label">Velocidad:</h6>
+            <p class="data" id="wheel-speed">?</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
